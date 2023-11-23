@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/fondaleDragonballProva.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.container .goku {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    animation-name: speedy;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.container .goku img {
+    width: 231.6px;
+}
+
+.scia {
+    height: 36px;
+    width: 40px;
+    /* width: 100%; */
+    border-block: 1px solid black;
+    background-color: #bf78bc;
+    position: relative;
+    top: 72.5px;
+    right: 30px;
+}
+
+.riflesso {
+    height: 15px;
+    width: 100%;
+    background-color: #dfbae6;
+    position: relative;
+    top: 6px;
+}
+
+@keyframes speedy {
+    0% {
+        right: -20%;
+    }
+
+    25% {
+        right: 20%;
+    }
+
+    50% {
+        right: 60%;
+    }
+
+    75% {
+        right: 100%;
+    }
+
+    100% {
+        right: 120%;
+    }
+}
+
