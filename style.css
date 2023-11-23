@@ -56,15 +56,59 @@
     width: 60px;
     height: 60px;
     background: red;
+    transition: all 3s;
 }
+
+.ex-5-square:hover {
+    margin: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+.ex-5-square:active {
+    margin: 30px;
+    width: 30px;
+    height: 30px;
+}
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-6-img:hover {
+    filter: grayscale(100%);
+}
+
+.ex-7-img {
+    transition: filter 2s 1s;
+}
+
+.ex-7-img:hover {
+    filter: hue-rotate(180deg) invert(100%);
+}
+
+.ex-8-img {
+    transition: all 3s;
+}
+
+.ex-8-img:hover {
+    filter: contrast(80%) invert(100%);
+    border-radius: 30px;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 4s ease-in-out;
 }
+
+.ex-9-img:hover {
+    filter: hue-rotate(80deg) drop-shadow(0 0 20px green);
+    border-radius: 30px;
+    margin: 25px 50px;
+    width: 800px;
+}
+
 .ex-10-icon {
     font-size: 60px;
 }
