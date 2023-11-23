@@ -111,10 +111,68 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: fast-reverse-rotate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes fast-reverse-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -133,6 +191,7 @@
     top: -10px;
     left: 10%;
     background: #f5f5f5;
+    /* background: red; */
     width: 60px;
     height: 20px;
 }
@@ -141,6 +200,133 @@
     bottom: -10px;
     right: 20%;
     background: #f5f5f5;
+    /* background: red; */
     width: 60px;
     height: 20px;
+}
+
+.ex-12-top-white {
+    animation-name: window-rotation-top;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes window-rotation-top {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    50% {
+        top: -10px;
+        left: calc(100% - 60px - 10%);
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-12-bottom-white {
+    animation-name: window-rotation-bottom;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes window-rotation-bottom {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    50% {
+        bottom: -10px;
+        right: calc(100% - 60px - 20%);
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
+.ex-13-top-white {
+    animation-name: window-total-rotation-top;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+}
+
+@keyframes window-total-rotation-top {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    30% {
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+
+    45% {
+        left: calc(100% - 30px);
+        top: calc(100% - 10px);
+    }
+
+    75% {
+        left: -15px;
+        top: calc(100% - 10px);
+    }
+
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-bottom-white {
+    animation-name: window-total-rotation-bottom;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+}
+
+@keyframes window-total-rotation-bottom {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    30% {
+        bottom: -10px;
+        right: calc(100% - 45px);
+    }
+
+    45% {
+        right: calc(100% - 45px);
+        bottom: calc(100% - 10px);
+    }
+
+    75% {
+        right: -30px;
+        bottom: calc(100% - 10px);
+    }
+
+    90% {
+        right: -30px;
+        bottom: -10px;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
